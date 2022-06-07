@@ -1,14 +1,18 @@
+package Model;
+
+import java.util.ArrayList;
 import java.util.List;
 
-public class GerenciarEmpregado {
-    List<GerenciarEmpregado> listaEmpregados;
+public class GerenciarEmpregado extends Empregado {
+//    public static List<Empregado> listaEmpregados;
+    public static List listaEmpregados = new ArrayList<Empregado>();
 
     public void adcionarEmpregado(Empregado e) {
         listaEmpregados.add(this);
     }
 
 
-    public List<GerenciarEmpregado> ListaEmpregados() {
+    public static final List<Empregado> ListaEmpregados() {
         return listaEmpregados;
     }
 

@@ -1,3 +1,5 @@
+package Model;
+
 public class Empregado {
     private int codigoEmpregado;
     private String nomeEmpregado;
@@ -44,4 +46,9 @@ public class Empregado {
     public void setRecInss(double recInss) {
         this.recInss = recInss;
     }
+
+
+
 }
+
+

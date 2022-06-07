@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="View.EmpregadoGUI">
+  <grid id="27dc6" binding="panelTela" layout-manager="GridLayoutManager" row-count="7" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="1" left="1" bottom="1" right="1"/>
+    <constraints>
+      <xy x="20" y="20" width="500" height="400"/>
+    </constraints>
+    <properties/>
+    <border type="none" title-justification="2" title-position="1">
+      <font/>
+      <title-color color="-16711423"/>
+      <color color="-16711423"/>
+    </border>
+    <children>
+      <component id="249f0" class="javax.swing.JTextField" binding="txtCodigoEmpregado">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="11d2a" class="javax.swing.JLabel" binding="lblCodigoEmpregado">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <horizontalTextPosition value="10"/>
+          <labelFor value="249f0"/>
+          <text value="Código do Empregado"/>
+          <verticalAlignment value="3"/>
+          <verticalTextPosition value="3"/>
+        </properties>
+      </component>
+      <component id="968c5" class="javax.swing.JLabel" binding="lblNomeEmpregado">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-16711423"/>
+          <foreground color="-16711423"/>
+          <labelFor value="b53bc"/>
+          <text value="Nome do Empregado"/>
+        </properties>
+      </component>
+      <component id="b53bc" class="javax.swing.JTextField" binding="txtNomeEmpregado">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="8d39d" class="javax.swing.JLabel" binding="lblSetor">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <labelFor value="376bf"/>
+          <text value="Setor"/>
+        </properties>
+      </component>
+      <component id="376bf" class="javax.swing.JTextField" binding="txtSetor">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="8df47" class="javax.swing.JLabel" binding="lblSalarioBruto">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Salário Bruto"/>
+        </properties>
+      </component>
+      <component id="35c7a" class="javax.swing.JTextField" binding="txtSalarioBruto">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="bdcc5" class="javax.swing.JButton" binding="cmdCalcularRecolhimento">
+        <constraints>
+          <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Calcular Recolhimento INSS"/>
+        </properties>
+      </component>
+      <component id="48e38" class="javax.swing.JLabel" binding="lblRecolhimento">
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Recolhimento"/>
+        </properties>
+      </component>
+      <splitpane id="ae3f0">
+        <constraints>
+          <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="200" height="20"/>
+          </grid>
+        </constraints>
+        <properties>
+          <enabled value="true"/>
+          <oneTouchExpandable value="true"/>
+          <orientation value="1"/>
+          <resizeWeight value="0.0"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="4bfce" class="javax.swing.JButton" binding="cmdCadastrar">
+            <constraints>
+              <splitpane position="left"/>
+            </constraints>
+            <properties>
+              <text value="Cadastrar"/>
+            </properties>
+          </component>
+          <component id="96630" class="javax.swing.JButton" binding="cmdApresentarEmpregados">
+            <constraints>
+              <splitpane position="right"/>
+            </constraints>
+            <properties>
+              <text value="Apresentar Empregados"/>
+            </properties>
+          </component>
+        </children>
+      </splitpane>
+      <component id="26138" class="javax.swing.JTextArea" binding="txtRecolhimento">
+        <constraints>
+          <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="50"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+    </children>
+  </grid>
+</form>

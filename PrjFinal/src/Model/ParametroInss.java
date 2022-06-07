@@ -1,3 +1,5 @@
+package Model;
+
 public class ParametroInss {
     public static final double faixa1 = 0.075;
     public static final double limiteFaixa1 = 1212.0;
@@ -8,7 +10,7 @@ public class ParametroInss {
     public static final double faixa4 = 0.14;
     public static final double limiteFaixa4 = 7087.22;
 
-    public double calcularInss(double valor) {
+    public static final double calcularInss(double valor) {
         if(valor<=limiteFaixa1) {
             return valor*faixa1;
         } else if(valor<=limiteFaixa2){
