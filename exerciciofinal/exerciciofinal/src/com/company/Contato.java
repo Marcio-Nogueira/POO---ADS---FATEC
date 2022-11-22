@@ -8,6 +8,15 @@ public class Contato {
 
     private String email;
 
+    public Contato(String contato, String telefone, String email) {
+        this.contato = contato;
+        this.telefone = telefone;
+        this.email = email;
+    }
+
+    public Contato() {
+    }
+
     public String getContato() {
         return contato;
     }

@@ -39,7 +39,7 @@ public class GerenciarProduto {
                     cadastrarProduto(scanner);
                     break;
                 case 3:
-                    System.out.println("contato");
+                    cadastrarContato(scanner);
                     break;
                 case 4:
                     System.out.println("abrir cesta");
@@ -57,13 +57,31 @@ public class GerenciarProduto {
                     System.out.println("Digite uma opção válida");
                     break;
             }
-        } while(fecharMenu == false);
+        } while(!fecharMenu);
+    }
+
+    private static Contato cadastrarContato(Scanner scanner) {
+        System.out.println("-------Cadastro de Contato-------");
+        System.out.println("Entre com os dados a seguir:");
+        System.out.println("\nContato:");
+        String contato = scanner.nextLine();
+        System.out.println("\nEmail:");
+        String email = scanner.nextLine();
+        System.out.println("\nTelefone:");
+        String telefone = scanner.nextLine();
+        Contato contato1 = new Contato(contato, email, telefone);
+        return contato1;
     }
 
     private static void opcoesCarrinho(int alternativa) {
         switch (alternativa) {
             case 1:
-                System.out.println("1");
+
+                for (int i = 0; i < Cesta.getItens().size(); i++) {
+                    System.out.println(Cesta.getItens().get(i).toString());
+                }
+
+
                 break;
             case 2:
                 System.out.println("2");
@@ -84,9 +102,8 @@ public class GerenciarProduto {
         Double preco = Double.parseDouble(scanner.nextLine());
         System.out.println("\nQuantidade:");
         int quantidade = Integer.parseInt(scanner.nextLine());
-        System.out.println("\nFornecedor");
-        Fornecedor fornecedor = new Fornecedor();
-        //criar lista de fonecedor
+        Produto produto = new Produto(codigoProd, descricao, preco, quantidade);
+        Cesta.adcionarItem(produto);
     }
 
     private static void cadastrarFornecedor(Scanner scanner) {
@@ -101,16 +118,7 @@ public class GerenciarProduto {
         String cidade = scanner.nextLine();
         System.out.println("\nEstado:");
         String estado = scanner.nextLine();
-        Contato contato = new Contato();
-        System.out.println("Contato:");
-        String cont = scanner.nextLine();
-        contato.setContato(cont);
-        System.out.println("Telefone:");
-        String telefone = scanner.nextLine();
-        contato.setTelefone(telefone);
-        System.out.println("email:");
-        String email = scanner.nextLine();
-        contato.setEmail(email);
+        Contato contato = cadastrarContato(scanner);
         Fornecedor fornecedor = new Fornecedor(codigoForn, razaoSocial,endereco,
                 cidade, estado, contato);
     }

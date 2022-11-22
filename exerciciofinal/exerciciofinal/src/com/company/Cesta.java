@@ -6,7 +6,7 @@ public class Cesta {
 
     public static ArrayList<Produto> itens = new ArrayList<Produto>();
 
-    public void adcionarItem(Produto produto) {
+    public static void adcionarItem(Produto produto) {
         itens.add(produto);
     }
 
