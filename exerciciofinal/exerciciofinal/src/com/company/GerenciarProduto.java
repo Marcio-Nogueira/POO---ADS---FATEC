@@ -47,7 +47,7 @@ public class GerenciarProduto {
                     System.out.println("2. Fechar Carrinho");
                     int alternativa = 0;
                     alternativa = Integer.parseInt(scanner.nextLine());
-                    opcoesCarrinho(alternativa);
+                    opcoesCarrinho(alternativa, scanner);
                     break;
                 case 5:
                     System.out.println("saindo");
@@ -73,18 +73,21 @@ public class GerenciarProduto {
         return contato1;
     }
 
-    private static void opcoesCarrinho(int alternativa) {
+    private static void opcoesCarrinho(int alternativa, Scanner scanner) {
         switch (alternativa) {
             case 1:
-
+                System.out.println("-----Produtos disponiveis------");
                 for (int i = 0; i < Cesta.getItens().size(); i++) {
-                    System.out.println(Cesta.getItens().get(i).toString());
+                    System.out.println(i + ". " + Cesta.getItens().get(i).toString());
                 }
-
-
+                System.out.println("Digite o index do produto desejado");
+                int index = Integer.parseInt(scanner.nextLine());
+                Cesta.adcionarItem(Cesta.getItens().get(index));
                 break;
             case 2:
-                System.out.println("2");
+                System.out.println("Total ");
+                double total = Cesta.calcularTotal();
+                System.out.println("Total: " + total);
                 break;
             default:
                 System.out.println("Digite uma opção válida");

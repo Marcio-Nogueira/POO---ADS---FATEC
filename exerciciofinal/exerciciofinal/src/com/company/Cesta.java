@@ -14,7 +14,7 @@ public class Cesta {
         return itens;
     }
 
-    public double calcularTotal() {
+    public static double calcularTotal() {
         double total = 0;
 
         if(itens.isEmpty()) {
