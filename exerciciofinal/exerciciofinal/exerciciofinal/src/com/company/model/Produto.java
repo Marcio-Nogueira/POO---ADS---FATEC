@@ -1,4 +1,4 @@
-package com.company;
+package com.company.model;
 
 public class Produto {
     private int codigo;
@@ -16,6 +16,10 @@ public class Produto {
         this.descricao = descricao;
         this.preco = preco;
         this.quantidade = quantidade;
+    }
+
+    public double getTotal(double preco, int quantidade) {
+        return preco * quantidade;
     }
 
     public int getCodigo() {
